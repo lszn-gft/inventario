@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: inventario-app-deployment
 spec:
-  replicas: 2 # Define el número de instancias (Pods) que deseas ejecutar
+  replicas: 2 # Define el número de instancias (Pods) que se desean ejecutar
   selector:
     matchLabels:
       app: inventario-app
@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: inventario-container
-          image: inventario-app:latest # O <tu_nombre_de_usuario>/inventario-app:latest si la publicaste
+          image: inventario-app:latest
           ports:
             - containerPort: 8080

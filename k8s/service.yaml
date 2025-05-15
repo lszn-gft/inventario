@@ -9,4 +9,4 @@ spec:
     - protocol: TCP
       port: 80 # Puerto al que se expondrá el servicio dentro del clúster
       targetPort: 8080 # Puerto en el que la aplicación está escuchando en el contenedor
-  type: LoadBalancer # Utiliza LoadBalancer si estás en un entorno con soporte, sino prueba ClusterIP o NodePort
+  type: LoadBalancer
