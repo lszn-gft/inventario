@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: inventario-app-deployment
+spec:
+  replicas: 2 # Define el número de instancias (Pods) que deseas ejecutar
+  selector:
+    matchLabels:
+      app: inventario-app
+  template:
+    metadata:
+      labels:
+        app: inventario-app
+    spec:
+      containers:
+        - name: inventario-container
+          image: inventario-app:latest # O <tu_nombre_de_usuario>/inventario-app:latest si la publicaste
+          ports:
+            - containerPort: 8080
